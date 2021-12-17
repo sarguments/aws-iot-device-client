@@ -1,0 +1,204 @@
+\hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature}{}\doxysection{Aws\+::Iot\+::Device\+Client\+::Samples\+::Pub\+Sub\+Feature Class Reference}
+\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature}\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+
+
+Provides IoT Pub\+Sub related sample functionality within the Device Client. When enabled The Pub Sub sample feature will publish data from a configured {\ttfamily publish-\/file} to a {\ttfamily publish-\/topic}, and will recieve messages on a configured {\ttfamily subscribe-\/topic} and write them to a {\ttfamily subscribe-\/file}. More information can be found in the {\ttfamily samples/pubsub/\+R\+E\+A\+D\+M\+E.\+md}  
+
+
+
+
+{\ttfamily \#include $<$Pub\+Sub\+Feature.\+h$>$}
+
+Inheritance diagram for Aws\+::Iot\+::Device\+Client\+::Samples\+::Pub\+Sub\+Feature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a3a480988233d873aea415b1474b54cff}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a3a480988233d873aea415b1474b54cff}} 
+bool {\bfseries create\+Pub\+Sub} (const \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config, std\+::string abs\+File\+Path)
+\item 
+int \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a736ce90574aec35fa81e192c9b155356}{init}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}} $>$ manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_client_base_notifier}{Client\+Base\+Notifier}} $>$ notifier, const \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config)
+\begin{DoxyCompactList}\small\item\em Initializes the Pub\+Sub feature with all the required setup information, event handlers, and the \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a39be6798f2c40d1b96c0542f9a85a96a}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a39be6798f2c40d1b96c0542f9a85a96a}} 
+void {\bfseries Load\+From\+Config} (const \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config)
+\item 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_aabe18c3a3df860338e65d9a11e18b4e6}{get\+Name}} () override
+\begin{DoxyCompactList}\small\item\em For a given feature, returns its name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_abca21e4e5bdf09f391c8f5d7f2d24382}{start}} () override
+\begin{DoxyCompactList}\small\item\em Start the feature. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a7d954103b9a4645e1f28a09c48ad5b01}{stop}} () override
+\begin{DoxyCompactList}\small\item\em Stop the feature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a4e92aff94d026735093e617575907bfd}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a4e92aff94d026735093e617575907bfd}} 
+static constexpr char {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+B\+L\+I\+S\+H\+\_\+\+F\+I\+LE} \mbox{[}$\,$\mbox{]} = \char`\"{}$\sim$/.aws-\/iot-\/device-\/client/pubsub/publish-\/file.\+txt\char`\"{}
+\item 
+static constexpr char {\bfseries D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+U\+B\+S\+C\+R\+I\+B\+E\+\_\+\+F\+I\+LE} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a1fd660dea3a5f3fb9b70027f0b0b1bb8}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a1fd660dea3a5f3fb9b70027f0b0b1bb8}} 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a1fd660dea3a5f3fb9b70027f0b0b1bb8}{publish\+File\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Workflow function for publishing data to the configured topic. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a5880bc26ee55786130acdd11aff6974b}{get\+Publish\+File\+Data}} (aws\+\_\+byte\+\_\+buf $\ast$buf)
+\begin{DoxyCompactList}\small\item\em Called to read the publish file data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a19a19578c3eea6ea1d2ca17be96854f3}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a19a19578c3eea6ea1d2ca17be96854f3}} 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a19a19578c3eea6ea1d2ca17be96854f3}{thing\+Name}}
+\begin{DoxyCompactList}\small\item\em the Thing\+Name to use \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_af95756799bef2025c01fcbfb52f42e3c}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_af95756799bef2025c01fcbfb52f42e3c}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}} $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_af95756799bef2025c01fcbfb52f42e3c}{resource\+Manager}}
+\begin{DoxyCompactList}\small\item\em The resource manager used to manage C\+RT resources. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a43992d7087ee52d4aa6546118e5d8430}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a43992d7087ee52d4aa6546118e5d8430}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_client_base_notifier}{Client\+Base\+Notifier}} $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a43992d7087ee52d4aa6546118e5d8430}{base\+Notifier}}
+\begin{DoxyCompactList}\small\item\em An interface used to notify the Client base if there is an event that requires its attention. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_af599b378caed9ac8fa077da9507757ea}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_af599b378caed9ac8fa077da9507757ea}} 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_af599b378caed9ac8fa077da9507757ea}{pub\+Topic}}
+\begin{DoxyCompactList}\small\item\em Topic for publishing data to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a0f9f8956534c6d615c762f517ac39557}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a0f9f8956534c6d615c762f517ac39557}} 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a0f9f8956534c6d615c762f517ac39557}{pub\+File}} = D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+B\+L\+I\+S\+H\+\_\+\+F\+I\+LE
+\begin{DoxyCompactList}\small\item\em Location of file containing data to publish. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ae5a4ad172ed4435a03b7c8d7d5284373}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ae5a4ad172ed4435a03b7c8d7d5284373}} 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ae5a4ad172ed4435a03b7c8d7d5284373}{sub\+Topic}}
+\begin{DoxyCompactList}\small\item\em Topic to subscribe to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a770cd0e0c6e594ca95896a91724f5714}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a770cd0e0c6e594ca95896a91724f5714}} 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a770cd0e0c6e594ca95896a91724f5714}{sub\+File}} = D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+U\+B\+S\+C\+R\+I\+B\+E\+\_\+\+F\+I\+LE
+\begin{DoxyCompactList}\small\item\em Topic to write subscription payloads to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a8ee7a043b57e8b6346430c8a7f0ebc88}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a8ee7a043b57e8b6346430c8a7f0ebc88}} 
+const std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a8ee7a043b57e8b6346430c8a7f0ebc88}{D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+U\+B\+L\+I\+S\+H\+\_\+\+P\+A\+Y\+L\+O\+AD}} = \char`\"{}Hello World!\char`\"{}
+\begin{DoxyCompactList}\small\item\em Default payload if no publish file was provided. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ac2056c297e922d692f08206f5ec96bc9}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ac2056c297e922d692f08206f5ec96bc9}} 
+const std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ac2056c297e922d692f08206f5ec96bc9}{P\+U\+B\+L\+I\+S\+H\+\_\+\+T\+R\+I\+G\+G\+E\+R\+\_\+\+P\+A\+Y\+L\+O\+AD}} = \char`\"{}DC-\/Publish\char`\"{}
+\begin{DoxyCompactList}\small\item\em Subscription payload used to retrigger the publish actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ad1f22ebb87ee0d139b130f331629ec53}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ad1f22ebb87ee0d139b130f331629ec53}} 
+static constexpr char {\bfseries T\+AG} \mbox{[}$\,$\mbox{]} = \char`\"{}samples/Pub\+Sub\+Feature.\+cpp\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides IoT Pub\+Sub related sample functionality within the Device Client. When enabled The Pub Sub sample feature will publish data from a configured {\ttfamily publish-\/file} to a {\ttfamily publish-\/topic}, and will recieve messages on a configured {\ttfamily subscribe-\/topic} and write them to a {\ttfamily subscribe-\/file}. More information can be found in the {\ttfamily samples/pubsub/\+R\+E\+A\+D\+M\+E.\+md} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_aabe18c3a3df860338e65d9a11e18b4e6}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_aabe18c3a3df860338e65d9a11e18b4e6}} 
+\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}!getName@{getName}}
+\index{getName@{getName}!Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Pub\+Sub\+Feature\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+For a given feature, returns its name. 
+
+\begin{DoxyReturn}{Returns}
+a string value representing the feature\textquotesingle{}s name 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_feature_a7f56b81457898d67ddc1942e57e3c0d5}{Aws\+::\+Iot\+::\+Device\+Client\+::\+Feature}}.
+
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a5880bc26ee55786130acdd11aff6974b}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a5880bc26ee55786130acdd11aff6974b}} 
+\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}!getPublishFileData@{getPublishFileData}}
+\index{getPublishFileData@{getPublishFileData}!Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+\doxysubsubsection{\texorpdfstring{getPublishFileData()}{getPublishFileData()}}
+{\footnotesize\ttfamily int Pub\+Sub\+Feature\+::get\+Publish\+File\+Data (\begin{DoxyParamCaption}\item[{aws\+\_\+byte\+\_\+buf $\ast$}]{buf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Called to read the publish file data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Buffer to read data into \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a736ce90574aec35fa81e192c9b155356}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a736ce90574aec35fa81e192c9b155356}} 
+\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}!init@{init}}
+\index{init@{init}!Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily int Pub\+Sub\+Feature\+::init (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}} $>$}]{manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_client_base_notifier}{Client\+Base\+Notifier}} $>$}]{notifier,  }\item[{const \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&}]{config }\end{DoxyParamCaption})}
+
+
+
+Initializes the Pub\+Sub feature with all the required setup information, event handlers, and the \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & The resource manager used to manage C\+RT resources \\
+\hline
+{\em notifier} & an \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_client_base_notifier}{Client\+Base\+Notifier}} used for notifying the client base of events or errors \\
+\hline
+{\em config} & configuration information passed in by the user via either the command line or configuration file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a non-\/zero return code indicates a problem. The logs can be checked for more info 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_abca21e4e5bdf09f391c8f5d7f2d24382}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_abca21e4e5bdf09f391c8f5d7f2d24382}} 
+\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}!start@{start}}
+\index{start@{start}!Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily int Pub\+Sub\+Feature\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Start the feature. 
+
+\begin{DoxyReturn}{Returns}
+an integer representing the S\+U\+C\+C\+E\+SS or F\+A\+I\+L\+U\+RE of the \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_abca21e4e5bdf09f391c8f5d7f2d24382}{start()}} operation on the feature 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_feature_ac9a936ebd88f7e35914a6aac99badf7d}{Aws\+::\+Iot\+::\+Device\+Client\+::\+Feature}}.
+
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a7d954103b9a4645e1f28a09c48ad5b01}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a7d954103b9a4645e1f28a09c48ad5b01}} 
+\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}!stop@{stop}}
+\index{stop@{stop}!Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily int Pub\+Sub\+Feature\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stop the feature. 
+
+\begin{DoxyReturn}{Returns}
+an integer representing the S\+U\+C\+C\+E\+SS or F\+A\+I\+L\+U\+RE of the \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_a7d954103b9a4645e1f28a09c48ad5b01}{stop()}} operation on the feature 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_feature_a5b672f7b1403512cad9104ba923fc73d}{Aws\+::\+Iot\+::\+Device\+Client\+::\+Feature}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ace179a83cc0a06b335b96dd45d6b7c34}\label{class_aws_1_1_iot_1_1_device_client_1_1_samples_1_1_pub_sub_feature_ace179a83cc0a06b335b96dd45d6b7c34}} 
+\index{Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}!DEFAULT\_SUBSCRIBE\_FILE@{DEFAULT\_SUBSCRIBE\_FILE}}
+\index{DEFAULT\_SUBSCRIBE\_FILE@{DEFAULT\_SUBSCRIBE\_FILE}!Aws::Iot::DeviceClient::Samples::PubSubFeature@{Aws::Iot::DeviceClient::Samples::PubSubFeature}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SUBSCRIBE\_FILE}{DEFAULT\_SUBSCRIBE\_FILE}}
+{\footnotesize\ttfamily constexpr char Pub\+Sub\+Feature\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+U\+B\+S\+C\+R\+I\+B\+E\+\_\+\+F\+I\+LE\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{                        \textcolor{stringliteral}{"\string~/.aws-\/iot-\/device-\/client/pubsub/subscribe-\/file.txt"}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/samples/pubsub/Pub\+Sub\+Feature.\+h\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/samples/pubsub/Pub\+Sub\+Feature.\+cpp\end{DoxyCompactItemize}

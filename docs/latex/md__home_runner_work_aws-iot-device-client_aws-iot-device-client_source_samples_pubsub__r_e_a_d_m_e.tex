@@ -1,0 +1,28 @@
+{\bfseries{Notice\+:}} Running the A\+WS IoT Device Client will incur usage of A\+WS IoT services, and is likely to incur charges on your A\+WS account. Please refer the pricing pages for \href{https://aws.amazon.com/iot-core/pricing/}{\texttt{ A\+WS IoT Core}}, \href{https://aws.amazon.com/iot-device-management/pricing/}{\texttt{ A\+WS IoT Device Management}}, and \href{https://aws.amazon.com/iot-device-defender/pricing/}{\texttt{ A\+WS IoT Device Defender}} for more details.
+
+../../../\+R\+E\+A\+D\+ME.md \char`\"{}$\ast$\+Back To The Main Readme$\ast$\char`\"{}\hypertarget{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_samples_pubsub__r_e_a_d_m_e_autotoc_md41}{}\doxysection{Pub Sub Sample Feature}\label{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_samples_pubsub__r_e_a_d_m_e_autotoc_md41}
+The Pub Sub sample feature was designed to illustrate how you might take advantage of the shared mqtt connection that exists in the {\ttfamily Shared\+Crt\+Resource\+Manager}. The Pub Sub sample feature will publish data from a configured {\ttfamily publish-\/file} to a {\ttfamily publish-\/topic}, and will recieve messages on a configured {\ttfamily subscribe-\/topic} and write them to a {\ttfamily subscribe-\/file}.
+
+The feature also allows you to retrigger the publish action by sending a message with the payload {\ttfamily D\+C-\/\+Publish} to the configured {\ttfamily subscribe-\/topic}.\hypertarget{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_samples_pubsub__r_e_a_d_m_e_autotoc_md42}{}\doxysubsubsection{Configuring the Pub Sub Sample feature via the J\+S\+O\+N configuration file}\label{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_samples_pubsub__r_e_a_d_m_e_autotoc_md42}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{    "samples": \{}
+\DoxyCodeLine{        "pub-\/sub": \{}
+\DoxyCodeLine{            "enabled": false,}
+\DoxyCodeLine{            "publish-\/topic": "replace\_with\_publish\_topic",}
+\DoxyCodeLine{            "publish-\/file": "replace\_with\_publish\_file",}
+\DoxyCodeLine{            "subscribe-\/topic": "replace\_with\_subscribe\_topic",}
+\DoxyCodeLine{            "subscribe-\/file": "replace\_with\_subscribe\_file"}
+\DoxyCodeLine{            \}}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\itshape It is important to note that providing files is optional. If they are not configured or left blank, \char`\"{}\+Hello World!\char`\"{} will be published over M\+Q\+TT by default.}
+
+\href{\#pub-sub-sample}{\texttt{ {\itshape Back To The Top}}} 

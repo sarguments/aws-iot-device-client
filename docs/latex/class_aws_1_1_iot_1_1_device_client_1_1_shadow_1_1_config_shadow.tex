@@ -1,0 +1,346 @@
+\hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow}{}\doxysection{Aws\+::Iot\+::Device\+Client\+::Shadow\+::Config\+Shadow Class Reference}
+\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow}\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a8ded93e5b65195a6d77869807db610b7}{reconfigure\+With\+Config\+Shadow}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}} $>$ resource\+Manager, \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config)
+\begin{DoxyCompactList}\small\item\em Updating Device Client Configuration using Shadow feature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ad9471094f3922d5d0148de1e9251aa8c}{reset\+Client\+Config\+With\+J\+S\+ON}} (\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config, Crt\+::\+Json\+View \&delta\+View, Crt\+::\+Json\+View \&desired\+View)
+\begin{DoxyCompactList}\small\item\em Updates the local device client configuration with delta information in the config shadow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a18bf8b64c82f39a0fd7d7c9e84ec64ba}{fetch\+Remote\+Config\+Shadow}} (Iotshadow\+::\+Iot\+Shadow\+Client Iot\+Shadow\+Client)
+\begin{DoxyCompactList}\small\item\em fetches the information in config shadow from cloud by publishing a request to Get\+Named\+Shadow \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a4aa17be96facb2c770e3ad2b1b16e3d6}{get\+Named\+Shadow\+Accepted\+Handler}} (Iotshadow\+::\+Get\+Shadow\+Response $\ast$response, int io\+Error)
+\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a6365a9d8a7f3b695cc2f56648e26d0cb}{get\+Named\+Shadow\+Rejected\+Handler}} (Iotshadow\+::\+Error\+Response $\ast$error\+Response, int io\+Error)
+\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a239aa9b23e9d8b45c08a602ffa624905}{update\+Named\+Shadow\+Accepted\+Handler}} (Iotshadow\+::\+Update\+Shadow\+Response $\ast$response, int io\+Error)
+\begin{DoxyCompactList}\small\item\em Executed if our request to Update\+Named\+Shadow is accepted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a11db820f3a20f2bb77a16e22dc000289}{update\+Named\+Shadow\+Rejected\+Handler}} (Iotshadow\+::\+Error\+Response $\ast$error\+Response, int io\+Error)
+\begin{DoxyCompactList}\small\item\em Executed if our request to Update\+Named\+Shadow is rejected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_adc4990fbdcc449bfb42547533edbe818}{ack\+Subscribe\+To\+Update\+Named\+Shadow\+Accepted}} (int io\+Error)
+\begin{DoxyCompactList}\small\item\em Acknowledgement that IoT Core has received our request for subscription to Update\+Named\+Shadow Accepted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a67182587a0d2794893f8c67f66e4f68d}{ack\+Subscribe\+To\+Update\+Named\+Shadow\+Rejected}} (int io\+Error)
+\begin{DoxyCompactList}\small\item\em Acknowledgement that IoT Core has received our request for subscription to Update\+Named\+Shadow Rejected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aa56241814b68b5b73b0003e2783f1305}{ack\+Subscribe\+To\+Get\+Named\+Shadow\+Accepted}} (int io\+Error)
+\begin{DoxyCompactList}\small\item\em Acknowledgement that IoT Core has received our request for subscription to Get\+Named\+Shadow Accepted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ad62e97962ecd418d60be4f341aa17664}{ack\+Subscribe\+To\+Get\+Named\+Shadow\+Rejected}} (int io\+Error)
+\begin{DoxyCompactList}\small\item\em Acknowledgement that IoT Core has received our request for subscription to Get\+Named\+Shadow Rejected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ab4892ba02370bfd3114f6dbc836b4e95}{ack\+Get\+Named\+Shadow\+Status}} (int io\+Error)
+\begin{DoxyCompactList}\small\item\em Acknowledgement that IoT Core has received our Get\+Named\+Shadow Request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ab21baee44d843fa6f91e21dc33cba719}{ack\+Update\+Named\+Shadow\+Status}} (int io\+Error)
+\begin{DoxyCompactList}\small\item\em Acknowledgement that IoT Core has received our Update\+Named\+Shadow Request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aef4ba13d7327890f5e9e527e76f449a5}{subscribe\+Get\+And\+Update\+Named\+Shadow\+Topics}} (Iotshadow\+::\+Iot\+Shadow\+Client iot\+Shadow\+Client)
+\begin{DoxyCompactList}\small\item\em Subscribes to pertinent named shadow G\+ET and U\+P\+D\+A\+TE topics. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aef94bbe80a5ce506cd07a54bdfc1d849}{update\+Shadow\+With\+Local\+Config}} (Iotshadow\+::\+Iot\+Shadow\+Client iot\+Shadow\+Client, \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config)
+\begin{DoxyCompactList}\small\item\em Sends the request to update config shadow with the latest features configuration in device client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a26bb576353f3acd1e975c7c9a871a61d}{load\+Feature\+Config\+Into\+Json\+Object}} (\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&config, Aws\+::\+Crt\+::\+Json\+Object \&json\+Obj)
+\begin{DoxyCompactList}\small\item\em Loads local configuration into a json object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a50c1ee4a33a0fca5758dd5f44e282e7c}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a50c1ee4a33a0fca5758dd5f44e282e7c}} 
+std\+::string \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a50c1ee4a33a0fca5758dd5f44e282e7c}{thing\+Name}}
+\begin{DoxyCompactList}\small\item\em the Thing\+Name to use \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a0aa498537710a10b9a7607c99e1e3c7e}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a0aa498537710a10b9a7607c99e1e3c7e}} 
+Aws\+::\+Crt\+::\+Optional$<$ Aws\+::\+Crt\+::\+Json\+Object $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a0aa498537710a10b9a7607c99e1e3c7e}{config\+Delta}}
+\begin{DoxyCompactList}\small\item\em Allow us to store the delta information in the config shadow from cloud. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ae3d755a39dafb40c899bed6de16992d1}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ae3d755a39dafb40c899bed6de16992d1}} 
+Aws\+::\+Crt\+::\+Optional$<$ Aws\+::\+Crt\+::\+Json\+Object $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ae3d755a39dafb40c899bed6de16992d1}{desired\+Config}}
+\begin{DoxyCompactList}\small\item\em Allow us to store the desired information in the config shadow from cloud. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a5c775875074c2f9cf5d64443b7319ede}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a5c775875074c2f9cf5d64443b7319ede}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a5c775875074c2f9cf5d64443b7319ede}{config\+Shadow\+Exists\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if the config shadow exists in the cloud \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a3c26f86402ffa560d575bf60e96aed50}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a3c26f86402ffa560d575bf60e96aed50}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a3c26f86402ffa560d575bf60e96aed50}{shadow\+Get\+Completed\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if publish request for Get\+Named\+Shadow was received \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a18abb4017084631f18db06dda98191fa}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a18abb4017084631f18db06dda98191fa}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a18abb4017084631f18db06dda98191fa}{subscribe\+Shadow\+Get\+Accepted\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if subscription request to Get\+Named\+Shadow Accepted topic was executed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a71308137dc0464d4a127fc01cc521a0c}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a71308137dc0464d4a127fc01cc521a0c}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a71308137dc0464d4a127fc01cc521a0c}{subscribe\+Shadow\+Get\+Rejected\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if subscription request to Get\+Named\+Shadow Rejected topic was executed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a2a2ba00c697baccc6bf801c6c28c9e1a}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a2a2ba00c697baccc6bf801c6c28c9e1a}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a2a2ba00c697baccc6bf801c6c28c9e1a}{shadow\+Update\+Completed\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if publish request for Update\+Named\+Shadow was received \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ac7a83d8a76a25c31330991be4b593114}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ac7a83d8a76a25c31330991be4b593114}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ac7a83d8a76a25c31330991be4b593114}{subscribe\+Shadow\+Update\+Accepted\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if subscription request to Update\+Named\+Shadow Accept topic was executed \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a0783d6b2fa05f0889bb36e7672afaf8d}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a0783d6b2fa05f0889bb36e7672afaf8d}} 
+std\+::promise$<$ bool $>$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a0783d6b2fa05f0889bb36e7672afaf8d}{subscribe\+Shadow\+Update\+Rejected\+Promise}}
+\begin{DoxyCompactList}\small\item\em a promise variable to check if subscription request to Update\+Named\+Shadow Rejected topic was executed \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a3c69df80352c15e8064afd7c6408ddbe}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a3c69df80352c15e8064afd7c6408ddbe}} 
+static constexpr char {\bfseries T\+AG} \mbox{[}$\,$\mbox{]} = \char`\"{}Config\+Shadow.\+cpp\char`\"{}
+\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a605ddd937429cec0a1714a44af2bd901}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a605ddd937429cec0a1714a44af2bd901}} 
+static constexpr char \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a605ddd937429cec0a1714a44af2bd901}{D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+S\+H\+A\+D\+O\+W\+\_\+\+N\+A\+ME}} \mbox{[}$\,$\mbox{]} = \char`\"{}Device\+Client\+Config\+Shadow\char`\"{}
+\begin{DoxyCompactList}\small\item\em the config shadow name to use \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a05bd2af2830bf0ac5a522adcd7680387}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a05bd2af2830bf0ac5a522adcd7680387}} 
+static constexpr int \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a05bd2af2830bf0ac5a522adcd7680387}{D\+E\+F\+A\+U\+L\+T\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+E\+C\+O\+N\+DS}} = 10
+\begin{DoxyCompactList}\small\item\em The default value in seconds for which Device client will wait for promise variables to be initialized. These promise variables will be initialized in respective callback methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ab4892ba02370bfd3114f6dbc836b4e95}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ab4892ba02370bfd3114f6dbc836b4e95}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!ackGetNamedShadowStatus@{ackGetNamedShadowStatus}}
+\index{ackGetNamedShadowStatus@{ackGetNamedShadowStatus}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{ackGetNamedShadowStatus()}{ackGetNamedShadowStatus()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::ack\+Get\+Named\+Shadow\+Status (\begin{DoxyParamCaption}\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acknowledgement that IoT Core has received our Get\+Named\+Shadow Request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. Turn on logging in IoT Core and check Cloud\+Watch for more insights on errors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aa56241814b68b5b73b0003e2783f1305}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aa56241814b68b5b73b0003e2783f1305}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!ackSubscribeToGetNamedShadowAccepted@{ackSubscribeToGetNamedShadowAccepted}}
+\index{ackSubscribeToGetNamedShadowAccepted@{ackSubscribeToGetNamedShadowAccepted}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{ackSubscribeToGetNamedShadowAccepted()}{ackSubscribeToGetNamedShadowAccepted()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::ack\+Subscribe\+To\+Get\+Named\+Shadow\+Accepted (\begin{DoxyParamCaption}\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acknowledgement that IoT Core has received our request for subscription to Get\+Named\+Shadow Accepted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ad62e97962ecd418d60be4f341aa17664}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ad62e97962ecd418d60be4f341aa17664}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!ackSubscribeToGetNamedShadowRejected@{ackSubscribeToGetNamedShadowRejected}}
+\index{ackSubscribeToGetNamedShadowRejected@{ackSubscribeToGetNamedShadowRejected}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{ackSubscribeToGetNamedShadowRejected()}{ackSubscribeToGetNamedShadowRejected()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::ack\+Subscribe\+To\+Get\+Named\+Shadow\+Rejected (\begin{DoxyParamCaption}\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acknowledgement that IoT Core has received our request for subscription to Get\+Named\+Shadow Rejected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_adc4990fbdcc449bfb42547533edbe818}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_adc4990fbdcc449bfb42547533edbe818}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!ackSubscribeToUpdateNamedShadowAccepted@{ackSubscribeToUpdateNamedShadowAccepted}}
+\index{ackSubscribeToUpdateNamedShadowAccepted@{ackSubscribeToUpdateNamedShadowAccepted}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{ackSubscribeToUpdateNamedShadowAccepted()}{ackSubscribeToUpdateNamedShadowAccepted()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::ack\+Subscribe\+To\+Update\+Named\+Shadow\+Accepted (\begin{DoxyParamCaption}\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acknowledgement that IoT Core has received our request for subscription to Update\+Named\+Shadow Accepted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a67182587a0d2794893f8c67f66e4f68d}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a67182587a0d2794893f8c67f66e4f68d}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!ackSubscribeToUpdateNamedShadowRejected@{ackSubscribeToUpdateNamedShadowRejected}}
+\index{ackSubscribeToUpdateNamedShadowRejected@{ackSubscribeToUpdateNamedShadowRejected}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{ackSubscribeToUpdateNamedShadowRejected()}{ackSubscribeToUpdateNamedShadowRejected()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::ack\+Subscribe\+To\+Update\+Named\+Shadow\+Rejected (\begin{DoxyParamCaption}\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acknowledgement that IoT Core has received our request for subscription to Update\+Named\+Shadow Rejected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ab21baee44d843fa6f91e21dc33cba719}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ab21baee44d843fa6f91e21dc33cba719}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!ackUpdateNamedShadowStatus@{ackUpdateNamedShadowStatus}}
+\index{ackUpdateNamedShadowStatus@{ackUpdateNamedShadowStatus}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{ackUpdateNamedShadowStatus()}{ackUpdateNamedShadowStatus()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::ack\+Update\+Named\+Shadow\+Status (\begin{DoxyParamCaption}\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Acknowledgement that IoT Core has received our Update\+Named\+Shadow Request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. Turn on logging in IoT Core and check Cloud\+Watch for more insights on errors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a18bf8b64c82f39a0fd7d7c9e84ec64ba}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a18bf8b64c82f39a0fd7d7c9e84ec64ba}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!fetchRemoteConfigShadow@{fetchRemoteConfigShadow}}
+\index{fetchRemoteConfigShadow@{fetchRemoteConfigShadow}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{fetchRemoteConfigShadow()}{fetchRemoteConfigShadow()}}
+{\footnotesize\ttfamily bool Config\+Shadow\+::fetch\+Remote\+Config\+Shadow (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Iot\+Shadow\+Client}]{Iot\+Shadow\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+fetches the information in config shadow from cloud by publishing a request to Get\+Named\+Shadow 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Iot\+Shadow\+Client} & used for subscribing and publishing request \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return true if publishing request completed and received corresponding response from cloud successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a4aa17be96facb2c770e3ad2b1b16e3d6}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a4aa17be96facb2c770e3ad2b1b16e3d6}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!getNamedShadowAcceptedHandler@{getNamedShadowAcceptedHandler}}
+\index{getNamedShadowAcceptedHandler@{getNamedShadowAcceptedHandler}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{getNamedShadowAcceptedHandler()}{getNamedShadowAcceptedHandler()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::get\+Named\+Shadow\+Accepted\+Handler (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Get\+Shadow\+Response $\ast$}]{response,  }\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+A handler function called by the C\+RT S\+DK when our request to get a named shadow is accepted 
+\begin{DoxyParams}{Parameters}
+{\em response} & information used to check if config shadow and config delta exists \\
+\hline
+{\em io\+Error} & a non-\/zero error code indicates a problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a6365a9d8a7f3b695cc2f56648e26d0cb}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a6365a9d8a7f3b695cc2f56648e26d0cb}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!getNamedShadowRejectedHandler@{getNamedShadowRejectedHandler}}
+\index{getNamedShadowRejectedHandler@{getNamedShadowRejectedHandler}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{getNamedShadowRejectedHandler()}{getNamedShadowRejectedHandler()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::get\+Named\+Shadow\+Rejected\+Handler (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Error\+Response $\ast$}]{error\+Response,  }\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+A handler function called by the C\+RT S\+DK when our request to get a named shadow is rejected 
+\begin{DoxyParams}{Parameters}
+{\em response} & information about why the request is rejected \\
+\hline
+{\em io\+Error} & a non-\/zero error code indicates a problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a26bb576353f3acd1e975c7c9a871a61d}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a26bb576353f3acd1e975c7c9a871a61d}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!loadFeatureConfigIntoJsonObject@{loadFeatureConfigIntoJsonObject}}
+\index{loadFeatureConfigIntoJsonObject@{loadFeatureConfigIntoJsonObject}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{loadFeatureConfigIntoJsonObject()}{loadFeatureConfigIntoJsonObject()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::load\+Feature\+Config\+Into\+Json\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&}]{config,  }\item[{Aws\+::\+Crt\+::\+Json\+Object \&}]{json\+Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Loads local configuration into a json object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & device client local configuration \\
+\hline
+{\em json\+Obj} & contains all device client features\textquotesingle{} configuration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a8ded93e5b65195a6d77869807db610b7}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a8ded93e5b65195a6d77869807db610b7}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!reconfigureWithConfigShadow@{reconfigureWithConfigShadow}}
+\index{reconfigureWithConfigShadow@{reconfigureWithConfigShadow}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{reconfigureWithConfigShadow()}{reconfigureWithConfigShadow()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::reconfigure\+With\+Config\+Shadow (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_aws_1_1_iot_1_1_device_client_1_1_shared_crt_resource_manager}{Shared\+Crt\+Resource\+Manager}} $>$}]{resource\+Manager,  }\item[{\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&}]{config }\end{DoxyParamCaption})}
+
+
+
+Updating Device Client Configuration using Shadow feature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Mqtt\+Connection\+Manager} & \\
+\hline
+{\em Device} & Client configuration passed in by the user via either the command line or configuration file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ad9471094f3922d5d0148de1e9251aa8c}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_ad9471094f3922d5d0148de1e9251aa8c}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!resetClientConfigWithJSON@{resetClientConfigWithJSON}}
+\index{resetClientConfigWithJSON@{resetClientConfigWithJSON}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{resetClientConfigWithJSON()}{resetClientConfigWithJSON()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::reset\+Client\+Config\+With\+J\+S\+ON (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&}]{config,  }\item[{Crt\+::\+Json\+View \&}]{delta\+View,  }\item[{Crt\+::\+Json\+View \&}]{desired\+View }\end{DoxyParamCaption})}
+
+
+
+Updates the local device client configuration with delta information in the config shadow. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em config} & device client local configuration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aef4ba13d7327890f5e9e527e76f449a5}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aef4ba13d7327890f5e9e527e76f449a5}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!subscribeGetAndUpdateNamedShadowTopics@{subscribeGetAndUpdateNamedShadowTopics}}
+\index{subscribeGetAndUpdateNamedShadowTopics@{subscribeGetAndUpdateNamedShadowTopics}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{subscribeGetAndUpdateNamedShadowTopics()}{subscribeGetAndUpdateNamedShadowTopics()}}
+{\footnotesize\ttfamily bool Config\+Shadow\+::subscribe\+Get\+And\+Update\+Named\+Shadow\+Topics (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Iot\+Shadow\+Client}]{iot\+Shadow\+Client }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Subscribes to pertinent named shadow G\+ET and U\+P\+D\+A\+TE topics. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em io\+Error} & a non-\/zero code here indicates a problem. Turn on logging in IoT Core and check Cloud\+Watch for more insights on errors \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if all topics are subscribed successfully 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a239aa9b23e9d8b45c08a602ffa624905}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a239aa9b23e9d8b45c08a602ffa624905}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!updateNamedShadowAcceptedHandler@{updateNamedShadowAcceptedHandler}}
+\index{updateNamedShadowAcceptedHandler@{updateNamedShadowAcceptedHandler}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{updateNamedShadowAcceptedHandler()}{updateNamedShadowAcceptedHandler()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::update\+Named\+Shadow\+Accepted\+Handler (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Update\+Shadow\+Response $\ast$}]{response,  }\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Executed if our request to Update\+Named\+Shadow is accepted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & information about the updated shadow state \\
+\hline
+{\em io\+Error} & a non-\/zero error code indicates a problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a11db820f3a20f2bb77a16e22dc000289}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_a11db820f3a20f2bb77a16e22dc000289}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!updateNamedShadowRejectedHandler@{updateNamedShadowRejectedHandler}}
+\index{updateNamedShadowRejectedHandler@{updateNamedShadowRejectedHandler}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{updateNamedShadowRejectedHandler()}{updateNamedShadowRejectedHandler()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::update\+Named\+Shadow\+Rejected\+Handler (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Error\+Response $\ast$}]{error\+Response,  }\item[{int}]{io\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Executed if our request to Update\+Named\+Shadow is rejected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rejected\+Error} & information about the rejection \\
+\hline
+{\em io\+Error} & a non-\/zero error code indicates a problem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aef94bbe80a5ce506cd07a54bdfc1d849}\label{class_aws_1_1_iot_1_1_device_client_1_1_shadow_1_1_config_shadow_aef94bbe80a5ce506cd07a54bdfc1d849}} 
+\index{Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}!updateShadowWithLocalConfig@{updateShadowWithLocalConfig}}
+\index{updateShadowWithLocalConfig@{updateShadowWithLocalConfig}!Aws::Iot::DeviceClient::Shadow::ConfigShadow@{Aws::Iot::DeviceClient::Shadow::ConfigShadow}}
+\doxysubsubsection{\texorpdfstring{updateShadowWithLocalConfig()}{updateShadowWithLocalConfig()}}
+{\footnotesize\ttfamily void Config\+Shadow\+::update\+Shadow\+With\+Local\+Config (\begin{DoxyParamCaption}\item[{Iotshadow\+::\+Iot\+Shadow\+Client}]{iot\+Shadow\+Client,  }\item[{\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_plain_config}{Plain\+Config}} \&}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sends the request to update config shadow with the latest features configuration in device client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em iot\+Shadow\+Client} & \\
+\hline
+{\em config} & device client local configuration \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/shadow/Config\+Shadow.\+h\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/shadow/Config\+Shadow.\+cpp\end{DoxyCompactItemize}

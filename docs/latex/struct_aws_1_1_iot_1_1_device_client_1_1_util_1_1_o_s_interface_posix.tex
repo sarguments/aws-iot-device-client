@@ -1,0 +1,110 @@
+\hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix}{}\doxysection{Aws\+::Iot\+::Device\+Client\+::Util\+::O\+S\+Interface\+Posix Struct Reference}
+\label{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix}\index{Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}}
+
+
+\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix}{O\+S\+Interface\+Posix}} is an operating system interface using posix system calls.  
+
+
+
+
+{\ttfamily \#include $<$Env\+Utils.\+h$>$}
+
+Inheritance diagram for Aws\+::Iot\+::Device\+Client\+::Util\+::O\+S\+Interface\+Posix\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a98a1991cbe9b8bcbec22ad6bfb81aefa}{getenv}} (const char $\ast$name) override
+\begin{DoxyCompactList}\small\item\em Get value of an environment variable. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a72861e0fbf6e21961dfec91c3264ffca}{setenv}} (const char $\ast$name, const char $\ast$value, int overwrite) override
+\begin{DoxyCompactList}\small\item\em Add or change environment variable. \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a55a6ab13f4f5ce3bb5e1f264429da9f5}{getcwd}} (char $\ast$buf, size\+\_\+t size) override
+\begin{DoxyCompactList}\small\item\em Get the absolute pathname of the current working directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix}{O\+S\+Interface\+Posix}} is an operating system interface using posix system calls. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a55a6ab13f4f5ce3bb5e1f264429da9f5}\label{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a55a6ab13f4f5ce3bb5e1f264429da9f5}} 
+\index{Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}!getcwd@{getcwd}}
+\index{getcwd@{getcwd}!Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}}
+\doxysubsubsection{\texorpdfstring{getcwd()}{getcwd()}}
+{\footnotesize\ttfamily char $\ast$ O\+S\+Interface\+Posix\+::getcwd (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get the absolute pathname of the current working directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & Array of characters in which to store returned working directory \\
+\hline
+{\em size} & Size in bytes of the array pointed to by buf \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to buffer passed as input or nullptr if length of pathname exceeds size of buffer 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface}{Aws\+::\+Iot\+::\+Device\+Client\+::\+Util\+::\+O\+S\+Interface}}.
+
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a98a1991cbe9b8bcbec22ad6bfb81aefa}\label{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a98a1991cbe9b8bcbec22ad6bfb81aefa}} 
+\index{Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}!getenv@{getenv}}
+\index{getenv@{getenv}!Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}}
+\doxysubsubsection{\texorpdfstring{getenv()}{getenv()}}
+{\footnotesize\ttfamily char $\ast$ O\+S\+Interface\+Posix\+::getenv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get value of an environment variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Environment variable name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to environment variable value or nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface}{Aws\+::\+Iot\+::\+Device\+Client\+::\+Util\+::\+O\+S\+Interface}}.
+
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a72861e0fbf6e21961dfec91c3264ffca}\label{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface_posix_a72861e0fbf6e21961dfec91c3264ffca}} 
+\index{Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}!setenv@{setenv}}
+\index{setenv@{setenv}!Aws::Iot::DeviceClient::Util::OSInterfacePosix@{Aws::Iot::DeviceClient::Util::OSInterfacePosix}}
+\doxysubsubsection{\texorpdfstring{setenv()}{setenv()}}
+{\footnotesize\ttfamily int O\+S\+Interface\+Posix\+::setenv (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{const char $\ast$}]{value,  }\item[{int}]{overwrite }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Add or change environment variable. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Environment variable name \\
+\hline
+{\em value} & Environment variable value \\
+\hline
+{\em overwrite} & Replace environment variable value when non-\/zero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success or non-\/zero on error 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_util_1_1_o_s_interface}{Aws\+::\+Iot\+::\+Device\+Client\+::\+Util\+::\+O\+S\+Interface}}.
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/util/Env\+Utils.\+h\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/util/Env\+Utils.\+cpp\end{DoxyCompactItemize}

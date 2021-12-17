@@ -1,0 +1,93 @@
+\hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document}{}\doxysection{Aws\+::Iot\+::Device\+Client\+::Jobs\+::Plain\+Job\+Document Struct Reference}
+\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document}\index{Aws::Iot::DeviceClient::Jobs::PlainJobDocument@{Aws::Iot::DeviceClient::Jobs::PlainJobDocument}}
+Inheritance diagram for Aws\+::Iot\+::Device\+Client\+::Jobs\+::Plain\+Job\+Document\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_1_1_job_action}{Job\+Action}}
+\item 
+struct \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_1_1_job_condition}{Job\+Condition}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a238fb7cdc3c1296a982da9c50977a192}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a238fb7cdc3c1296a982da9c50977a192}} 
+void {\bfseries Load\+From\+Job\+Document} (const Json\+View \&json) override
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a8dc05c7dff676652f91e007544f0f3f6}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a8dc05c7dff676652f91e007544f0f3f6}} 
+bool {\bfseries Validate} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a4c50555ef67946d17cd1e6c8f961d95e}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a4c50555ef67946d17cd1e6c8f961d95e}} 
+static std\+::vector$<$ std\+::string $>$ {\bfseries Parse\+To\+Vector\+String} (const Json\+View \&json)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a11e330c8b580e9d6e7ef952d644169c9}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a11e330c8b580e9d6e7ef952d644169c9}} 
+std\+::string {\bfseries version}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a01eb5fe52dd3a44a678ef619cb12219d}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a01eb5fe52dd3a44a678ef619cb12219d}} 
+Optional$<$ bool $>$ {\bfseries include\+Std\+Out} \{false\}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a448348b9eb099b63575f79303c2fb8f9}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a448348b9eb099b63575f79303c2fb8f9}} 
+Optional$<$ std\+::vector$<$ \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_1_1_job_condition}{Job\+Condition}} $>$ $>$ {\bfseries conditions}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a904c9107865d101c7d1b23f46acefd80}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a904c9107865d101c7d1b23f46acefd80}} 
+std\+::vector$<$ \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_1_1_job_action}{Job\+Action}} $>$ {\bfseries steps}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aa7123c010d84d4a4a5baaef540e8d32e}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aa7123c010d84d4a4a5baaef540e8d32e}} 
+Optional$<$ \mbox{\hyperlink{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_1_1_job_action}{Job\+Action}} $>$ {\bfseries final\+Step}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aa2410496169d76b999d4a98aa774472c}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aa2410496169d76b999d4a98aa774472c}} 
+static constexpr char {\bfseries A\+C\+T\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+U\+N\+\_\+\+H\+A\+N\+D\+L\+ER} \mbox{[}$\,$\mbox{]} = \char`\"{}run\+Handler\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a4b84df178fe1e08a3974ca34d3e5a6c0}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a4b84df178fe1e08a3974ca34d3e5a6c0}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+V\+E\+R\+S\+I\+ON} \mbox{[}$\,$\mbox{]} = \char`\"{}version\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a07bcbd60c2af2f970bd081fe9fd3edc1}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a07bcbd60c2af2f970bd081fe9fd3edc1}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+C\+L\+U\+D\+E\+S\+T\+D\+O\+UT} \mbox{[}$\,$\mbox{]} = \char`\"{}include\+Std\+Out\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aca3337aff7eb8ee1d0e59859baabd0bd}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aca3337aff7eb8ee1d0e59859baabd0bd}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+C\+O\+N\+D\+I\+T\+I\+O\+NS} \mbox{[}$\,$\mbox{]} = \char`\"{}conditions\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_acbc367bdb9ad8d5a0a87fb8bc2ced27c}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_acbc367bdb9ad8d5a0a87fb8bc2ced27c}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+S\+T\+E\+PS} \mbox{[}$\,$\mbox{]} = \char`\"{}steps\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a2c2655e9227072eac183089e66810a90}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a2c2655e9227072eac183089e66810a90}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+A\+C\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \char`\"{}action\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_ab2c60dc6c87441a3db4b770776f9b8a2}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_ab2c60dc6c87441a3db4b770776f9b8a2}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+F\+I\+N\+A\+L\+S\+T\+EP} \mbox{[}$\,$\mbox{]} = \char`\"{}final\+Step\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_adb05a12f29060179e23e14aa17386551}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_adb05a12f29060179e23e14aa17386551}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+O\+P\+E\+R\+A\+T\+I\+ON} \mbox{[}$\,$\mbox{]} = \char`\"{}operation\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a37446f63c167cdd8e0e4aad6704ba7e2}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a37446f63c167cdd8e0e4aad6704ba7e2}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+A\+R\+GS} \mbox{[}$\,$\mbox{]} = \char`\"{}args\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a0295f5a27371d1a5de5fa6177dc5825f}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a0295f5a27371d1a5de5fa6177dc5825f}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+A\+L\+L\+O\+W\+S\+T\+D\+E\+RR} \mbox{[}$\,$\mbox{]} = \char`\"{}allow\+Std\+Err\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aeb7358e741afb184668fe1144399ec1a}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_aeb7358e741afb184668fe1144399ec1a}} 
+static constexpr char {\bfseries J\+S\+O\+N\+\_\+\+K\+E\+Y\+\_\+\+P\+A\+TH} \mbox{[}$\,$\mbox{]} = \char`\"{}path\char`\"{}
+\item 
+\mbox{\Hypertarget{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a495dd62f12fadfe2e5882724e1b36572}\label{struct_aws_1_1_iot_1_1_device_client_1_1_jobs_1_1_plain_job_document_a495dd62f12fadfe2e5882724e1b36572}} 
+static constexpr char {\bfseries O\+L\+D\+\_\+\+S\+C\+H\+E\+M\+A\+\_\+\+V\+E\+R\+S\+I\+ON} \mbox{[}$\,$\mbox{]} = \char`\"{}0.\+0\char`\"{}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/jobs/Job\+Document.\+h\item 
+/home/runner/work/aws-\/iot-\/device-\/client/aws-\/iot-\/device-\/client/source/jobs/Job\+Document.\+cpp\end{DoxyCompactItemize}

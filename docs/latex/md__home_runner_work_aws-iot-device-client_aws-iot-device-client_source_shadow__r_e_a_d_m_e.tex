@@ -1,0 +1,38 @@
+{\bfseries{Notice\+:}} Running the A\+WS IoT Device Client will incur usage of A\+WS IoT services, and is likely to incur charges on your A\+WS account. Please refer the pricing pages for \href{https://aws.amazon.com/iot-core/pricing/}{\texttt{ A\+WS IoT Core}}, \href{https://aws.amazon.com/iot-device-management/pricing/}{\texttt{ A\+WS IoT Device Management}}, and \href{https://aws.amazon.com/iot-device-defender/pricing/}{\texttt{ A\+WS IoT Device Defender}} for more details.
+
+../../../\+R\+E\+A\+D\+ME.md \char`\"{}$\ast$\+Back To The Main Readme$\ast$\char`\"{}\hypertarget{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_shadow__r_e_a_d_m_e_autotoc_md44}{}\doxysection{Shadow Feature}\label{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_shadow__r_e_a_d_m_e_autotoc_md44}
+The \href{https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html}{\texttt{ A\+WS IoT Device Shadow service}} adds shadows to A\+WS IoT thing objects, which provides a reliable data store for devices, apps, and other cloud services to share data. The client-\/side Named Shadows feature enables you to control your IoT device using A\+WS IoT Named Shadows. Shadows can store your device\textquotesingle{}s state information and make it available to your device, A\+WS IoT services, your custom apps and other A\+WS services whether the device is online and connected to A\+WS IoT or not.
+
+The following two shadow examples created in device client illustrate how you might take advantage of backend shadow sdk to store and interact with data in device shadow.\hypertarget{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_shadow__r_e_a_d_m_e_autotoc_md45}{}\doxysubsection{Sample Shadow}\label{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_shadow__r_e_a_d_m_e_autotoc_md45}
+Sample shadow is a shadow in which you can store custom data. You can set custom name of shadow you want to create or update by editing {\ttfamily shadow-\/name} in the configuration. This feature takes a data file as input, updating the target shadow with all data in this source file and writing the latest shadow document to a shadow output file every time if there is a shadow update event occurring. You can use this file to track the latest shadow data stored in the cloud. There is also a file monitor added for the feature to detect any change on the input data source file when device client is running, if any change is detected device client will update the shadow automatically to ensure that we have target shadow kept syncing with the input data source file.
+
+{\itshape Note\+: Device Client uses {\ttfamily inotify} to monitor the file change event happening under parent directory of input file. At most it could monitor 100 events by default, and the feature would stop monitoring file if this limit is reached.}\hypertarget{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_shadow__r_e_a_d_m_e_autotoc_md46}{}\doxysubsection{Config Shadow}\label{md__home_runner_work_aws-iot-device-client_aws-iot-device-client_source_shadow__r_e_a_d_m_e_autotoc_md46}
+Config shadow stores the device client feature’s \href{https://github.com/awslabs/aws-iot-device-client/blob/main/config-template.json}{\texttt{ configuration}}, and is served as reference implementation, enabling you to remotely configure the various features of the A\+WS IoT Device Client on their devices. When the config shadow is enabled, the device client will create or update a shadow named as {\ttfamily Device\+Client\+Config\+Shadow} with the latest feature and sample\textquotesingle{}s configuration. You can also update desired value in this config shadow from cloud side to remotely configure the device client. Once the value is updated, if the device client is running you need to restart the device client to make the new change take effect. Device client also provides jobs functionality to automate this restart process remotely, so you can also choose to create a new {\ttfamily restart job} when jobs feature is enabled. Device Client would also perform configuration validation check when detecting there is an update request from cloud, if a feature\textquotesingle{}s configuration in shadow is not valid, device client will abort this change and still keep sync with the local configuration. You can refer to the device client logging to identify which specific configuration is invalid.
+
+{\itshape Note\+: Config Shadow only supports to store Jobs/\+Tunneling/\+Device\+Defender/\+Sample\+Shadow/\+Pub\+Sub\textquotesingle{}s configureation and all secure parts of configuration (endpoints, thing-\/name, keys, certs, CA and Fleet\+Provision feature) will not be exposed in this shadow.}
+
+{\itshape Note\+: Device Client will check if there is update request from cloud by checking the \href{https://docs.aws.amazon.com/iot/latest/developerguide/device-shadow-mqtt.html\#update-delta-pub-sub-topic}{\texttt{ delta}} filed in the config shadow. If there is no update request from cloud, device client would be configured based on local setting and config shadow will be updated correspondingly.}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{   "config-\/shadow": \{}
+\DoxyCodeLine{        "enabled": false}
+\DoxyCodeLine{   \},}
+\DoxyCodeLine{   "sample-\/shadow": \{}
+\DoxyCodeLine{        "enabled": false,}
+\DoxyCodeLine{        "shadow-\/name": "<replace\_with\_shadow\_name>",}
+\DoxyCodeLine{        "shadow-\/input-\/file": "<replace\_with\_shadow\_input\_file\_path>",}
+\DoxyCodeLine{        "shadow-\/output-\/file": "<replace\_with\_shadow\_output\_file\_path>"}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\itshape It is important to note that providing input and output files is optional. If they are not configured or left blank, \char`\"{}\{welcome\char`\"{},\char`\"{}aws-\/iot\}\char`\"{} will be published to this shadow and the {\ttfamily default-\/sample-\/shadow-\/document}file will be created under this path {\ttfamily $\sim$/.aws-\/iot-\/device-\/client/sample-\/shadow/} by default}
+
+\href{\#Shadow_Feature}{\texttt{ {\itshape Back To The Top}}} 
